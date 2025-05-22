@@ -71,13 +71,13 @@ while True:
         print_hangstage()
         print(f"The word was '{comp_word}'")
         user_exit = yesRno("continue? (y/n): ")
-        if user_exit == 'y':
+        if user_exit == 'n':
            break
     
     
     if '_' not in hidden_word:
        print("You've successfully guessed the word!!!")
        user_exit = yesRno("continue? (y/n): ")
-       if user_exit == 'y':
+       if user_exit == 'n':
            break
 
