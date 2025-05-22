@@ -50,10 +50,9 @@ while True:
             print("Wrong guess!")
             current_hangman_stage += 1
 
-    if current_hangman_stage + 2 < len(hangman_assets.hangman_stages):
+    if current_hangman_stage < len(hangman_assets.hangman_stages) - 1:
         print_hangstage()
     else:
-        current_hangman_stage += 1
         print("You loose. You've exhausted all your guesses!")
         print_hangstage()
         print(f"The word was '{comp_word}'")
