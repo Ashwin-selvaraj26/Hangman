@@ -21,6 +21,8 @@ hidden_word = ['_'] * len(comp_word)
 
 current_hangman_stage = 0
 
+guessed_letters = []
+
 print("----------------------------------------------")
 print("              WELCOME TO HANGMAN              ")
 print("----------------------------------------------")
@@ -30,6 +32,12 @@ print_hangstage()
 
 while True:
     user_guess = get_string("Guess a letter or the word: ")
+
+    if user_guess in guessed_letters:
+        print("You've already guessed this letter")
+        continue
+
+    guessed_letters.append(user_guess)
 
     if 1 < len(user_guess):
         if user_guess == comp_word:
