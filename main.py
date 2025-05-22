@@ -25,7 +25,6 @@ print("----------------------------------------------")
 print("              WELCOME TO HANGMAN              ")
 print("----------------------------------------------")
 
-print(comp_word)
 
 print_hangstage()
 
@@ -34,8 +33,7 @@ while True:
 
     if 1 < len(user_guess):
         if user_guess == comp_word:
-            print("You've successfully guessed the word!!!")
-            break
+            hidden_word = user_guess
         else:
             print("Not the word. Try again")
 
