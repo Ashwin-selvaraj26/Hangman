@@ -1,6 +1,14 @@
 import random
 import hangman_assets
 
+def yesRno(prompt) :
+    while True:
+        user_inp = input(prompt).lower()
+        if user_inp in ('y', 'n'):
+            return user_inp
+        else:
+            print('invalid input')
+
 def print_hangstage() :
     print(hangman_assets.hangman_stages[current_hangman_stage])
     print("Word: ", ''.join(hidden_word))
@@ -67,5 +75,7 @@ while True:
     
     if '_' not in hidden_word:
        print("You've successfully guessed the word!!!")
-       break
+       user_exit = yesRno("continue? (y/n): ")
+       if user_exit == 'y':
+           break
 
