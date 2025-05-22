@@ -9,10 +9,10 @@ def print_hangstage() :
 def get_string(prompt) :
     while True:
         user_inp = input(prompt).lower()
-        if isinstance(user_inp, str):
+        if user_inp.isalpha():
             return user_inp
         else:
-            print("Invalid input. Enter a string")
+            print("Invalid input. Enter a word or letter")
 
 
 comp_word = random.choice(hangman_assets.words_list)
